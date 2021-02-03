@@ -2,7 +2,7 @@
 import { useAttractions, getAttractions } from "./AttractionProvider.js"
 
 const eventHub = document.querySelector(".mainContainer")
-const contentTarget = document.querySelector(".bizarrariesButton")
+const contentTarget = document.getElementById("bizarrariesButton")
 
 export const AttractionSelect = () => {
     getAttractions()
@@ -14,8 +14,9 @@ export const AttractionSelect = () => {
 
 const render = attractionsCollection => {
     contentTarget.innerHTML = `
+    <select>
     <option value="0">Please choose a bizarre...</option>
-    ${attractionsCollection.map(bizarres => `<option value="${bizarres.id}">${bizarres.name}</option>`).join("")}`
+    ${attractionsCollection.map(bizarres => `<option value="${bizarres.id}">${bizarres.name}</option>`).join("")}</select>`
 }
 
 eventHub.addEventListener("change", changeEvent => {
