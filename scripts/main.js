@@ -1,5 +1,7 @@
-import { EaterySelect } from "./eateries/EaterySelect.js"
 
+import { EaterySelect } from "./eateries/EaterySelect.js"
 EaterySelect();
 
-console.log("Hi Yasmeen!")
+import { ParkSelect } from "./parks/parkSelect.js";
+ParkSelect()
+
