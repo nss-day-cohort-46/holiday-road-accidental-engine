@@ -6,7 +6,7 @@ import { useParks, getParks } from "../parks/ParkProvider.js"
 const eventHub = document.querySelector(".mainContainer")
 
 //define contentTarget & querySelector() that references where on the DOM <select> will be rendered
-const contentTarget = document.querySelector(".parksButton")
+const contentTarget = document.getElementById("parksButton")
 
 //Listen for a change on eventHub. If eventListener detects a change, changeEvent function runs
 eventHub.addEventListener("change", changeEvent => {
@@ -32,8 +32,8 @@ export const ParkSelect = () => {
     getParks()
         .then(() => {
             //return all parks with useParks
-            debugger
             const parks = useParks()
+            debugger
             render(parks)
         })
 }

@@ -2,7 +2,8 @@
 let parks = [];
 
 // returns parks as objects
-export const useParks = () => parks.id.fullName.slice();
+export const useParks = () => parks.data.slice();
+
 
 //function to get parks from API
 export const getParks = () => {
