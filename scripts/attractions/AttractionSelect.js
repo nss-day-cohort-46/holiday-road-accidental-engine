@@ -12,10 +12,10 @@ export const AttractionSelect = () => {
     })
 }
 
-const render = (attractionsCollection) => {
+const render = attractionsCollection => {
     contentTarget.innerHTML = `
     <option value="0">Please choose a bizarre...</option>
-    ${attractionsCollection.map}`
+    ${attractionsCollection.map(bizarres => `<option value="${bizarres.id}">${bizarres.name}</option>`).join("")}`
 }
 
 eventHub.addEventListener("change", changeEvent => {
