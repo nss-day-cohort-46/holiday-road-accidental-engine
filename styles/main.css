@@ -1,3 +1,40 @@
 header {
+    background-image: url('/../../images/banner.webp');
     display: flex;
+    justify-content: center;
+}
+body {
+    margin: 0%;
+    background-color: #cc8a32;
+    font-family: 'Actor', sans-serif;
+}
+.logo {
+    width: 200px;
+    align-self: flex-start;
+}
+.title {
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}
+footer {
+    display: flex;
+    margin: 20px 0;
+    padding: 40px 0;
+    justify-content: space-evenly;
+    background-color: #184553;
+}
+.footerBoxes {
+    color: #cc8a32;
+    border: 2px solid #cc8a32;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+.footerImage {
+    width: 50px;
+    padding-right: 5px;
+    border-radius: 15px;
 }
