@@ -1,12 +1,12 @@
 let weather = [];
 
 
-export const useWeather = () => weather.slice();
+export const useWeather = () => weather.weather.slice();
 
 
 //get weather from API
 export const getWeather = () => {
-    return fetch("api.openweathermap.org/data/2.5/forecast?q=Nashville,TN&appid=6fa8865ca2fdcb9f09e8011d5d4a517c")
+    return fetch("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3f8451e0b46939dd52d03da8c2011d89")
         .then(response => response.json())
         .then(weatherArray => weather = weatherArray)
 }
