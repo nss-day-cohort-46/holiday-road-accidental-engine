@@ -42,7 +42,7 @@ export const ParkSelect = () => {
 const render = parkCollection => {
     
     contentTarget.innerHTML = `
-        <option value="0">Park...</option>
+        <option value="0">Please select a park...</option>
         ${parkCollection.map(park => `<option value="${park.id}">${park.name}</option>`).join("")}  
     `
 }
