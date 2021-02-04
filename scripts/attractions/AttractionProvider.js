@@ -1,6 +1,3 @@
-// List all bizarraries in a dropdown. When user chooses one, 
-// display the name of the bizarre attraction in the Itinerary Preview section.
-
 let bizarraries = []
 
 export const useAttractions = () => {
