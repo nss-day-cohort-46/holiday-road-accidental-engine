@@ -9,7 +9,7 @@ const dispatchStateChangeEvent = () => {
 
 //fetch data from API
 let itinerary = []
-export const getitinerary = () => {
+export const getItineraries = () => {
     return fetch('http://localhost:8088/db')
         .then(response => response.json())
         .then(parsedItinerary => {
