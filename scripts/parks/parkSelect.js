@@ -33,7 +33,7 @@ export const ParkSelect = () => {
         .then(() => {
             //return all parks with useParks
             const parks = useParks()
-            debugger
+            
             render(parks)
         })
 }
@@ -42,7 +42,9 @@ export const ParkSelect = () => {
 const render = parkCollection => {
     
     contentTarget.innerHTML = `
-        <option value="0">Park...</option>
-        ${parkCollection.map(park => `<option value="${park.id}">${park.name}</option>`).join("")}  
-    `
+        <select>
+            <option value="0">Please choose a park...</option>
+            ${parkCollection.map(park => `<option value="${park.id}">${park.name}</option>`).join("")}  
+        </select>
+        `
 }
