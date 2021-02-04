@@ -13,11 +13,11 @@ export const getItineraries = () => {
     return fetch('http://localhost:8088/db')
         .then(response => response.json())
         .then(parsedItinerary => {
-            note = parsedItinerary
+            itinerary = parsedItinerary
         })
 
 }
-
+//POST to API
 export const saveItinerary = itinerary => {
     return fetch('http://localhost:8088/db', {
         method: "POST",
