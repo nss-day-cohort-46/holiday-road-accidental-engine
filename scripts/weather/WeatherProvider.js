@@ -2,7 +2,7 @@ let weather = {};
 
 
 export const useWeather = () => {
-    ...weather
+    
 };
 
 
