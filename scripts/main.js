@@ -10,3 +10,7 @@ AttractionSelect()
 EaterySelect()
 renderSaveButton()
 // ParkButtonList()
+
+import { testfunction } from "./parks/ParkDetails.js"
+
+testfunction()
