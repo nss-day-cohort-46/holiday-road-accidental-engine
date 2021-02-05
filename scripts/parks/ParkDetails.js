@@ -1,4 +1,4 @@
-import { getParks, useParks } from "./ParkProvider.js"
+import { useParks } from "./ParkProvider.js"
 
 const contentContainer = document.querySelector(".previews")
 
@@ -37,4 +37,4 @@ eventHub.addEventListener("parkDetailsClicked",event => {
 
     // })
 }
-// )
+)

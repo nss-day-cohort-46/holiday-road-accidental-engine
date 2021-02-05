@@ -3,6 +3,8 @@ import { ParkSelect } from "./parks/parkSelect.js";
 import { EaterySelect } from "./eateries/EaterySelect.js";
 import { renderSaveButton } from "./itineraries/ItinerarySave.js"
 // import { ParkButtonList } from "./parks/ParkButtonList.js"
+import "./parks/ParkDetails.js"
+import "./eateries/EateryDetails.js"
 
 
 ParkSelect()
@@ -11,6 +13,8 @@ EaterySelect()
 renderSaveButton()
 // ParkButtonList()
 
-import { testfunction } from "./parks/ParkDetails.js"
 
-testfunction()
+// this is for testing the parks details component
+// import { testFunction } from "./eateries/EateryDetails.js"
+
+// testFunction()
