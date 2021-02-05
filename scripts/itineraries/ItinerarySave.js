@@ -39,11 +39,8 @@ eventHub.addEventListener("parkSelect", customEvent => {
     
     //assign useParks() to a variable so it can be searched with .find()
     let parkArray = useParks()
-<<<<<<< HEAD
-=======
     
     //use .find method to return the park you're looking for and assign it to a variable
->>>>>>> main
     let selectedPark = parkArray.find(parkObj => {
         return parkObj.id === parkId 
     })
