@@ -1,7 +1,7 @@
 import { getParks } from "./ParkProvider.js"
 
 export const ParkDetails = (park) => {
-    const contentContainer = document.querySelector(".parksButton")
+    const contentContainer = document.querySelector(".previews")
 
     const parksHTML = `
     <h2>Park Details for ${park.fullName}</h2>
@@ -17,11 +17,11 @@ export const ParkDetails = (park) => {
 
 const eventHub = document.querySelector(".mainContainer")
 eventHub.addEventListener("parkDetailsClicked", event => {
-    console.log("event", event)
+    // console.log("event", event)
     const parkId = clickEvent.detail.parkId
     const parksArray = getParks()
     const selectedPark = parksArray.find((park) => park.id === parkId)
-    console.log('selectedPark: ', selectedPark)
+    // console.log('selectedPark: ', selectedPark)
     ParkDetails(selectedPark)
 
 })
