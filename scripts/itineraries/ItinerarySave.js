@@ -21,7 +21,6 @@ eventHub.addEventListener("parkSelect", customEvent => {
     let parkId = customEvent.detail.parkId
     //use find method to match park id with name
     let parkArray = useParks()
-    debugger
     let selectedPark = parkArray.find(parkObj => {
         return parkObj.id === parkId 
     })

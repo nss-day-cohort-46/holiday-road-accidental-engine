@@ -3,11 +3,12 @@ import { ParkSelect } from "../scripts/parks/parkSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")
+const customEvent = new CustomEvent("parkDetailsClicked")
 
-// let parkPreview = {
-//     parkId: "",
-//     parkName: "",
-// }
+let parkPreview = {
+    parkId: "",
+    parkName: "",
+}
 
 eventHub.addEventListener("parkSelect", event => {
     if (event.detail.parkId !==0) {
@@ -19,39 +20,27 @@ eventHub.addEventListener("parkSelect", event => {
         parkPreview.parkName = event.detail.fullName
         // renderItineraryPreview()
             }
-            // dispatch "selectedPark"
+            eventHub.dispatchEvent(customEvent)
+
 })
 
 
-const renderItineraryPreview (selectedPark) => {
+const renderItineraryPreview = (selectedPark) => {
     let selectedParkHTMLrep = ""
     for (const parkObj of selectedPark) {
         selectedParkHTMLrep += ParkSelect(parkObj)
     }
-    // render parkSelected name to DOM.
-    // render details button to DOM with payload.
     // seperate HTML containers for each PreviewItem that is rendered.
     // += to append the next element to preview.
-
-    render ParkDetailsButton
-    export const ParkDetailsButton = (park) => {
+    // detail button needs work.
+    // export 
+    const ParkDetailsButton = (park) => {
         return `<button id="park--${park.id}">Park Details</button>`
     }
+
+    contentTarget.innerHTML = `
+        <h3></h3>
+        <div>${selectedParkHTMLrep}</div>
+    `
+
 }
-
-
-
-
-// const renderToDom = (criminalCollection) => {
-//     let criminalsHTMLRepresentations = ""
-  
-//     for (const criminal of criminalCollection) {
-//       criminalsHTMLRepresentations += Criminal(criminal)
-//     }
-    
-//     criminalsContainer.innerHTML = `
-//     <h3>Criminals</h3>
-//     <section class="criminalsList">
-//     ${criminalsHTMLRepresentations}
-//     </section>`
-//   }
