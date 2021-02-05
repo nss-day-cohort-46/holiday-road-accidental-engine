@@ -1,4 +1,4 @@
-export const ItineraryHTMLConverter = (itineraryObject) => {
+export const itineraryHTMLConverter = (itineraryObject) => {
     
     return `
         

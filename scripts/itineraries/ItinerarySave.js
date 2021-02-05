@@ -3,7 +3,7 @@ import { saveItinerary } from "./ItinerariesDataProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
 import { useEateries } from "../eateries/EateryProvider.js"
 import { useAttractions } from "../attractions/AttractionProvider.js"
-import { ItineraryHTMLConverter } from "./Itineraries.js"
+import { itineraryHTMLConverter } from "./Itineraries.js"
 
 
 //define eventHub & querySelector()
