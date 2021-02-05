@@ -14,13 +14,13 @@ export const AttractionSelect = () => {
 
 const render = attractionsCollection => {
     contentTarget.innerHTML = `
-    <select>
+    <select id="bizarrariesDropdown">
     <option value="0">Please choose a bizarre...</option>
     ${attractionsCollection.map(bizarres => `<option value="${bizarres.id}">${bizarres.name}</option>`).join("")}</select>`
 }
 
 eventHub.addEventListener("change", changeEvent => {
-    if (changeEvent.target.id === "bizarrariesButton") {
+    if (changeEvent.target.id === "bizarrariesDropdown") {
         const selectBizarre = changeEvent.target.value
         const bizarreSelectedEvent = new CustomEvent("bizarreSelected", {
             detail: {
