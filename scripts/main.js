@@ -6,9 +6,14 @@ import "./itineraries/ItinerarySave.js"
 import { renderSaveButton } from "./itineraries/ItinerarySave.js";
 // import { itineraryList } from "./itineraries/ItinerariesList.js";
 
+
 ParkSelect()
 AttractionSelect()
 EaterySelect()
 WeatherList()
 renderSaveButton()
 // itineraryList()
+
+
+import "./weather/WeatherProvider.js";
+
