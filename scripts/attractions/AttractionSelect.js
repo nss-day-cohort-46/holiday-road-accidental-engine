@@ -32,7 +32,6 @@ const render = attractionsCollection => {
     <option value="0">Please choose a bizarre...</option>
     ${attractionsCollection.map(bizarres => `<option value="${bizarres.id}">${bizarres.name}</option>`).join("")}</select>`
 }
-<<<<<<< HEAD
 
 eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "bizarrariesDropdown") {
@@ -45,5 +44,3 @@ eventHub.addEventListener("change", changeEvent => {
         eventHub.dispatchEvent(bizarreSelectedEvent)
     }
 })
-=======
->>>>>>> main
