@@ -10,7 +10,7 @@ const dispatchStateChangeEvent = () => {
 //fetch data from API
 let itinerary = []
 export const getItineraries = () => {
-    return fetch('http://localhost:8088/db')
+    return fetch('http://localhost:8088/itineraries')
         .then(response => response.json())
         .then(parsedItinerary => {
             itinerary = parsedItinerary
@@ -19,7 +19,7 @@ export const getItineraries = () => {
 }
 //POST to API
 export const saveItinerary = itinerary => {
-    return fetch('http://localhost:8088/db', {
+    return fetch('http://localhost:8088/itineraries', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
