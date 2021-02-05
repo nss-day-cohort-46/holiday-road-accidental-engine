@@ -18,7 +18,7 @@ const render = (itineraryArray) => {
     ).join("")
 
     contentTarget.innerHTML = `
-        <h3>Saved Trips</h3>
+        <h3 id=savedTripsTitle>Saved Trips</h3>
         <section class="itineraryList">
         ${itinerariesConvertedToStrings}
         </section>`

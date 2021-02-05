@@ -97,7 +97,7 @@ eventHub.addEventListener("click", clickEvent => {
     
     if (clickEvent.target.id === "addToItinerary")
     {
-        debugger
+        
         console.log(clickEvent.target.id)
         // assign captured variables to new object
         const newItinerary = {
