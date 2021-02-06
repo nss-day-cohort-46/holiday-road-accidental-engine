@@ -33,10 +33,10 @@ export const itineraryList = () => {
         })
 }
 
-eventHub.addEventListener("dispatchStateChangeEvent", event => {
-    if (contentTarget.innerHTML !== "") {
+eventHub.addEventListener("itineraryStateChanged", event => {
+    
         itineraryList()
-    }
+    
 })
 
 // eventHub.addEventListener("clearItinerariesClicked", customEvent => {
