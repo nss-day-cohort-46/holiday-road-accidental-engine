@@ -97,19 +97,22 @@ eventHub.addEventListener("click", clickEvent => {
     
     if (clickEvent.target.id === "addToItinerary")
     {
-        
-        console.log(clickEvent.target.id)
-        // assign captured variables to new object
-        const newItinerary = {
-            "parkId": newItineraryObject.parkId ,
-            "parkName": newItineraryObject.parkName,
-            "eateryId": newItineraryObject.eateryId,
-            "eateryName": newItineraryObject.eateryName,
-            "bizarraryId": newItineraryObject.bizarrieId,            
-            "bizarraryName": newItineraryObject.bizarrieName            
-        }
+        if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+            debugger  
+            console.log(newItineraryObject.parkName)
+            // assign captured variables to new object
+            const newItinerary = {
+                "parkId": newItineraryObject.parkId ,
+                "parkName": newItineraryObject.parkName,
+                "eateryId": newItineraryObject.eateryId,
+                "eateryName": newItineraryObject.eateryName,
+                "bizarraryId": newItineraryObject.bizarrieId,            
+                "bizarraryName": newItineraryObject.bizarrieName            
+            }
 
-        // Change API state and application state
-        saveItinerary(newItinerary)
+            // Change API state and application state
+            saveItinerary(newItinerary)
+        }
     }
 })
+
