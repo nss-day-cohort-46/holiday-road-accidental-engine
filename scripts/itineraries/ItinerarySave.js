@@ -12,8 +12,8 @@ const contentTarget = document.getElementById("saveButton")
 
 //render save button to DOM
 export const renderSaveButton = () => {
-    
-    contentTarget.innerHTML = `
+
+        contentTarget.innerHTML = `
         <button class="button" id="addToItinerary">Save Itinerary</button>
         `
 
@@ -49,6 +49,11 @@ eventHub.addEventListener("parkSelect", customEvent => {
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
     console.log(newItineraryObject)
+    
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 // //listen for eateryChosen custom events
@@ -69,6 +74,11 @@ eventHub.addEventListener("eateryChosen", customEvent => {
     newItineraryObject.eateryId = eateryId
     newItineraryObject.eateryName = selectedEatery.businessName
     console.log(newItineraryObject)
+
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 
@@ -89,6 +99,11 @@ eventHub.addEventListener("bizarreSelected", customEvent => {
     newItineraryObject.bizarrieId = bizarreId
     newItineraryObject.bizarrieName = selectedBizarre.name
     console.log(newItineraryObject)
+
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 
@@ -116,3 +131,10 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
+export const disableBtn = () => {
+    document.getElementById("addToItinerary").disabled = true;
+}
+  
+const enableBtn = () => {
+    document.getElementById("addToItinerary").disabled = false;
+}
