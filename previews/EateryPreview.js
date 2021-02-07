@@ -1,37 +1,35 @@
-// import { useParks } from "../scripts/parks/ParkProvider.js"
-// import { ParkSelect } from "../scripts/parks/parkSelect.js"
+import { useEateries } from "../scripts/eateries/EateryProvider.js"
 
-// const eventHub = document.querySelector(".mainContainer")
-// const contentTarget = document.querySelector(".previews")
+const eventHub = document.querySelector(".mainContainer")
+const contentTarget = document.querySelector(".previews")
 
-// eventHub.addEventListener("parkSelect", event => {
-//     if (event.detail.parkId !== "0") {
-//         const parksArray = useParks()
-//         const  parkSelectedEvent = parksArray.find(parksObj => {
-//             return parksObj.id === event.detail.parkId
-//         })
-//         renderItineraryPreview(parkSelectedEvent)
-//     }
+eventHub.addEventListener("eateryChosen", event => {
+    if (event.detail.eateryThatWasChosen !== "0") {
+        const eateriesArray = useEateries()
+        const  eaterySelectedEvent = eateriesArray.find(eateriesObj => {
+            return eateriesObj.id === event.detail.eateryThatWasChosen
+        })
+        renderEateryPreview(eaterySelectedEvent)
+    }
     
-// })
+})
 
-// const renderItineraryPreview = (selectedPark) => {
-//     contentTarget.innerHTML = `
-//     <h3>Itinerary Preview</h3>
-//     <div>Selected Park: ${selectedPark.name}</div>
-//     <button id="park--${selectedPark.id}">Park Details</button>
-//     `
-// }
+const renderEateryPreview = (selectedEatery) => {
+    contentTarget.innerHTML = `
+    <div>Selected Eatery: ${selectedEatery.name}</div>
+    <button id="${selectedEatery.id}">Eatery Details</button>
+    `
+}
 
 // eventHub.addEventListener("click", event => {
-//     if (clickEvent.target.id === selectedPark.id)
-//     const clickedPark = clickEvent.target.value
+//     if (clickEvent.target.id === selectedEatery.id)
+//     const eaterySelectedId = clickEvent.target.value
 
-//     const parkSelectedCustomEvent = new CustomEvent("parkDetailsClicked", {
+//     const eaterySelectedCustomEvent = new CustomEvent("eateryDetailsClicked", {
 //         detail: {
-//             clickedPark: clickedPark
+//             clickedEatery: eaterySelectedId
 //         }
 //     })
-//     eventHub.dispatchEvent(parkSelectedCustomEvent)
+//     eventHub.dispatchEvent(eaterySelectedCustomEvent)
 
 // })

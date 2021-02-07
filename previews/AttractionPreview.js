@@ -1,37 +1,33 @@
-// import { useParks } from "../scripts/parks/ParkProvider.js"
-// import { ParkSelect } from "../scripts/parks/parkSelect.js"
+import { useAttractions } from "../scripts/attractions/AttractionProvider.js"
+import { AttractionSelect } from "../scripts/attractions/AttractionSelect.js"
 
-// const eventHub = document.querySelector(".mainContainer")
-// const contentTarget = document.querySelector(".previews")
+const eventHub = document.querySelector(".mainContainer")
+const contentTarget = document.querySelector(".previews")
 
-// eventHub.addEventListener("parkSelect", event => {
-//     if (event.detail.parkId !== "0") {
-//         const parksArray = useParks()
-//         const  parkSelectedEvent = parksArray.find(parksObj => {
-//             return parksObj.id === event.detail.parkId
-//         })
-//         renderItineraryPreview(parkSelectedEvent)
-//     }
-    
-// })
+eventHub.addEventListener("bizarreSelected", event => {
+    if (event.detail.bizarreId !== "0") {
+        const attractionsArray = useAttractions()
+        const  attractionSelectedEvent = attractionsArray.find(attractionsObj => {
+            return attractionsObj.id === event.detail.bizarreId
+        })
+        renderAttractionPreview(attractionSelectedEvent)
+    }
+})
+// ^^attractionSelectedEvent is undefined!!  ugh...
 
-// const renderItineraryPreview = (selectedPark) => {
-//     contentTarget.innerHTML = `
-//     <h3>Itinerary Preview</h3>
-//     <div>Selected Park: ${selectedPark.name}</div>
-//     <button id="park--${selectedPark.id}">Park Details</button>
-//     `
-// }
+const renderAttractionPreview = (selectedAttraction) => {
+    contentTarget.innerHTML += `
+    <div>Selected Attraction: ${selectedAttraction.name}</div>
+    <button id="${selectedAttraction.id}">Attraction Details</button>
+    `
+}
 
-// eventHub.addEventListener("click", event => {
-//     if (clickEvent.target.id === selectedPark.id)
-//     const clickedPark = clickEvent.target.value
-
-//     const parkSelectedCustomEvent = new CustomEvent("parkDetailsClicked", {
+// eventHub.addEventListener("click", clickEvent => {
+//     let attractionsSelectedId = clickEvent.target.value
+//     const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
 //         detail: {
-//             clickedPark: clickedPark
+//             clickedAttraction: attractionsSelectedId
 //         }
 //     })
-//     eventHub.dispatchEvent(parkSelectedCustomEvent)
-
+//     eventHub.dispatchEvent(attractionSelectedCustomEvent)
 // })
