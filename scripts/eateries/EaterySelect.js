@@ -22,7 +22,7 @@ eventHub.addEventListener("change", changeEvent => {
         // Create custom event. Provide an appropriate name.
         const eateryCustomEvent = new CustomEvent("eateryChosen", {
             detail: {
-                eateryThatWasChosen: eateryThatWasChosen
+                eateryThatWasChosen: parseInt(eateryThatWasChosen)
             }
         })
 
