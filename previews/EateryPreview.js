@@ -23,7 +23,7 @@ const renderEateryPreview = (selectedEatery) => {
 }
 
 eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("eateryDetail--")) {
+    if (clickEvent.target.id.startsWith("eateryDetail")) {
         const [prefix, eaterySelectedId] = clickEvent.target.value.split("--")
         const eaterySelectedCustomEvent = new CustomEvent("eateryDetailsClicked", {
             detail: {
