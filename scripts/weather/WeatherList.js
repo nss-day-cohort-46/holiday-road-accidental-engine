@@ -17,7 +17,7 @@ const render = weatherCollection => {
 // console.log(weatherCollection)
     contentTarget.innerHTML = `
         <section class="weatherContainer value="${weatherCollection.map(weatherObj => {
-            `${weatherObj.main.temp}`}) }">
+            `${weatherObj.temp}`}) }">
         <div class="weatherContainer--items">${weatherCollection}</div>
         <div class="weatherContainer--items">${weatherCollection}</div>
         <div class="weatherContainer--items">${weatherCollection}</div>
