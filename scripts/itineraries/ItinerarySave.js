@@ -84,7 +84,7 @@ eventHub.addEventListener("eateryChosen", customEvent => {
 
 eventHub.addEventListener("bizarreSelected", customEvent => {
     console.log(newItineraryObject)
-    debugger
+    
     //access payload of custom event
     let bizarreId = customEvent.detail.bizarreId
 
@@ -114,7 +114,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addToItinerary")
     {
         if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
-            debugger  
+              
             console.log(newItineraryObject.parkName)
             // assign captured variables to new object
             const newItinerary = {
