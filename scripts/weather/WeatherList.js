@@ -1,4 +1,4 @@
-import { getWeather, useWeather, useCity } from "./WeatherProvider.js"
+import { getWeather, useWeather } from "./WeatherProvider.js"
 
 const contentTarget = document.querySelector(".weatherPreview")
 
@@ -7,13 +7,12 @@ export const WeatherList = () => {
     getWeather()
         .then(() => {
             const weatherArray = useWeather()
-            // const cityArray = useCity()
             render(weatherArray)
         })
 }
 
 const render = weatherCollection => {
-    debugger
+    // debugger
     const weatherToString = weatherCollection
 // console.log(weatherCollection)
     contentTarget.innerHTML = `
