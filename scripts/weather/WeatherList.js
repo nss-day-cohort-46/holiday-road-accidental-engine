@@ -13,7 +13,6 @@ export const WeatherList = () => {
 
 const render = weatherCollection => {
     // debugger
-    const weatherToString = weatherCollection
 // console.log(weatherCollection)
     contentTarget.innerHTML = `
         <section class="weatherContainer value="${weatherCollection.map(weatherObj => {
