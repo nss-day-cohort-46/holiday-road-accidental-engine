@@ -38,3 +38,71 @@ footer {
     padding-right: 5px;
     border-radius: 15px;
 }
+
+.mainContainer {
+    display: flex;
+}
+
+.containerLeft {
+    flex: 80%;
+
+}
+
+.containerRight {
+    flex: 20%;
+    
+}
+
+.savedItinerary {
+    border: black solid 2px;
+    margin: 10px;
+    background: #184553;
+    color: white;
+    border-radius: 10px;
+}
+
+.itinerary {
+    border: black 2px solid;
+    margin: 5px;
+    padding: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 10px;
+}
+
+#savedTripsTitle {
+    text-align: center;
+}
+
+.dropdownContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    border: solid black 2px;
+    padding: 10px;
+    border-radius: 5px;
+    background: aliceblue
+}
+
+#saveButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.dropdownTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.newItineraryContainer {
+    background: #184553;
+    color: white;
+    margin: 10px;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+#addToItinerary {
+    padding: 10px;
+}
