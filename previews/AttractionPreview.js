@@ -1,5 +1,5 @@
 import { useAttractions } from "../scripts/attractions/AttractionProvider.js"
-import { AttractionSelect } from "../scripts/attractions/AttractionSelect.js"
+import "../scripts/attractions/AttractionSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")
@@ -13,7 +13,6 @@ eventHub.addEventListener("bizarreSelected", event => {
         renderAttractionPreview(attractionSelectedEvent)
     }
 })
-// ^^attractionSelectedEvent is undefined!!  ugh...
 
 const renderAttractionPreview = (selectedAttraction) => {
     contentTarget.innerHTML += `
@@ -22,12 +21,12 @@ const renderAttractionPreview = (selectedAttraction) => {
     `
 }
 
-// eventHub.addEventListener("click", clickEvent => {
-//     let attractionsSelectedId = clickEvent.target.value
-//     const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
-//         detail: {
-//             clickedAttraction: attractionsSelectedId
-//         }
-//     })
-//     eventHub.dispatchEvent(attractionSelectedCustomEvent)
-// })
+eventHub.addEventListener("click", clickEvent => {
+    let attractionsSelectedId = clickEvent.target.value
+    const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
+        detail: {
+            clickedAttraction: attractionsSelectedId
+        }
+    })
+    eventHub.dispatchEvent(attractionSelectedCustomEvent)
+})

@@ -1,5 +1,5 @@
 import { useParks } from "../scripts/parks/ParkProvider.js"
-import { ParkSelect } from "../scripts/parks/parkSelect.js"
+import "../scripts/parks/parkSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")

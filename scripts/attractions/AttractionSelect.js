@@ -9,7 +9,7 @@ eventHub.addEventListener("change", changeEvent => {
         const selectBizarre = changeEvent.target.value
         const bizarreSelectedEvent = new CustomEvent("bizarreSelected", {
             detail: {
-                bizarreId: selectBizarre
+                bizarreId: parseInt(selectBizarre)
             }
         })
         eventHub.dispatchEvent(bizarreSelectedEvent)

@@ -1,4 +1,5 @@
 import { useEateries } from "../scripts/eateries/EateryProvider.js"
+import "../scripts/eateries/EaterySelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")
@@ -15,7 +16,7 @@ eventHub.addEventListener("eateryChosen", event => {
 })
 
 const renderEateryPreview = (selectedEatery) => {
-    contentTarget.innerHTML = `
+    contentTarget.innerHTML += `
     <div>Selected Eatery: ${selectedEatery.name}</div>
     <button id="${selectedEatery.id}">Eatery Details</button>
     `
@@ -24,12 +25,10 @@ const renderEateryPreview = (selectedEatery) => {
 // eventHub.addEventListener("click", event => {
 //     if (clickEvent.target.id === selectedEatery.id)
 //     const eaterySelectedId = clickEvent.target.value
-
 //     const eaterySelectedCustomEvent = new CustomEvent("eateryDetailsClicked", {
 //         detail: {
 //             clickedEatery: eaterySelectedId
 //         }
 //     })
 //     eventHub.dispatchEvent(eaterySelectedCustomEvent)
-
 // })
