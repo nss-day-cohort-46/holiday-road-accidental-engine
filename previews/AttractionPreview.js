@@ -23,10 +23,10 @@ const renderAttractionPreview = (selectedAttraction) => {
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("attractionDetail")) {
-    const [prefix, attractionsSelectedId] = clickEvent.target.value.split("--")
+    const [prefix, attractionsSelectedId] = clickEvent.target.id.split("--")
     const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
         detail: {
-            clickedAttraction: attractionsSelectedId
+            attractionId: attractionsSelectedId
         }
     })
     eventHub.dispatchEvent(attractionSelectedCustomEvent)
