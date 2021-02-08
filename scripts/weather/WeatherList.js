@@ -28,6 +28,7 @@ export const WeatherList = (lat, lon) => {
         })
 }
 
+
 //renders 5 day forcast to dom---------------------------------------------
 const render = weatherCollection => {
     contentTarget.innerHTML = `
@@ -54,6 +55,5 @@ const render = weatherCollection => {
             </div>
         </section>
         `
-        console.log(contentTarget.innerHTML)
-    }
-    
+}
+
