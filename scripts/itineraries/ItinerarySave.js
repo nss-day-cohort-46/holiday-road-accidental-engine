@@ -3,7 +3,7 @@ import { saveItinerary } from "./ItinerariesDataProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
 import { useEateries } from "../eateries/EateryProvider.js"
 import { useAttractions } from "../attractions/AttractionProvider.js"
-import { ItineraryHTMLConverter } from "./Itineraries.js"
+import { itineraryHTMLConverter } from "./Itineraries.js"
 
 
 //define eventHub & querySelector()
@@ -12,8 +12,8 @@ const contentTarget = document.getElementById("saveButton")
 
 //render save button to DOM
 export const renderSaveButton = () => {
-    
-    contentTarget.innerHTML = `
+
+        contentTarget.innerHTML = `
         <button class="button" id="addToItinerary">Save Itinerary</button>
         `
 
@@ -49,6 +49,11 @@ eventHub.addEventListener("parkSelect", customEvent => {
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
     console.log(newItineraryObject)
+    
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 // //listen for eateryChosen custom events
@@ -69,6 +74,11 @@ eventHub.addEventListener("eateryChosen", customEvent => {
     newItineraryObject.eateryId = eateryId
     newItineraryObject.eateryName = selectedEatery.businessName
     console.log(newItineraryObject)
+
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 
@@ -89,6 +99,11 @@ eventHub.addEventListener("bizarreSelected", customEvent => {
     newItineraryObject.bizarrieId = bizarreId
     newItineraryObject.bizarrieName = selectedBizarre.name
     console.log(newItineraryObject)
+
+    //enable save button if all dropdowns have been selected
+    if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+        enableBtn()
+    }
 })
 
 
@@ -97,19 +112,29 @@ eventHub.addEventListener("click", clickEvent => {
     
     if (clickEvent.target.id === "addToItinerary")
     {
-        debugger
-        console.log(clickEvent.target.id)
-        // assign captured variables to new object
-        const newItinerary = {
-            "parkId": newItineraryObject.parkId ,
-            "parkName": newItineraryObject.parkName,
-            "eateryId": newItineraryObject.eateryId,
-            "eateryName": newItineraryObject.eateryName,
-            "bizarraryId": newItineraryObject.bizarrieId,            
-            "bizarraryName": newItineraryObject.bizarrieName            
-        }
+        if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
+            debugger  
+            console.log(newItineraryObject.parkName)
+            // assign captured variables to new object
+            const newItinerary = {
+                "parkId": newItineraryObject.parkId ,
+                "parkName": newItineraryObject.parkName,
+                "eateryId": newItineraryObject.eateryId,
+                "eateryName": newItineraryObject.eateryName,
+                "bizarraryId": newItineraryObject.bizarrieId,            
+                "bizarraryName": newItineraryObject.bizarrieName            
+            }
 
-        // Change API state and application state
-        saveItinerary(newItinerary)
+            // Change API state and application state
+            saveItinerary(newItinerary)
+        }
     }
 })
+
+export const disableBtn = () => {
+    document.getElementById("addToItinerary").disabled = true;
+}
+  
+const enableBtn = () => {
+    document.getElementById("addToItinerary").disabled = false;
+}
