@@ -6,6 +6,9 @@ import { renderSaveButton } from "./itineraries/ItinerarySave.js"
 import "./parks/ParkDetails.js";
 import "./eateries/EateryDetails.js";
 import "./attractions/AttractionDetails.js";
+import "./itineraries/ItinerarySave.js"
+import { disableBtn, renderSaveButton } from "./itineraries/ItinerarySave.js";
+import { itineraryList } from "./itineraries/ItinerariesList.js";
 
 ParkSelect()
 AttractionSelect()
@@ -18,3 +21,5 @@ renderSaveButton()
 // import { testFunction } from "./attractions/AttractionDetails.js"
 
 // testFunction()
+itineraryList()
+disableBtn()
