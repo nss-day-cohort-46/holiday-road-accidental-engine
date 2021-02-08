@@ -41,11 +41,11 @@ export const getWeather = (lat, lon) => {
             day4 = parsedWeather.daily[3]
             day5 = parsedWeather.daily[4]
             //grabs temperature for each day---
-            temp1 = day1.temp.day
-            temp2 = day2.temp.day
-            temp3 = day3.temp.day
-            temp4 = day4.temp.day
-            temp5 = day5.temp.day
+            temp1 = parseInt(day1.temp.day)
+            temp2 = parseInt(day2.temp.day)
+            temp3 = parseInt(day3.temp.day)
+            temp4 = parseInt(day4.temp.day)
+            temp5 = parseInt(day5.temp.day)
             //grabs weather description for each day---
             des1 = day1.weather[0].description
             des2 = day2.weather[0].description
@@ -53,5 +53,6 @@ export const getWeather = (lat, lon) => {
             des4 = day4.weather[0].description
             des5 = day5.weather[0].description
         })
+
 }
 
