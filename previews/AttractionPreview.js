@@ -17,16 +17,18 @@ eventHub.addEventListener("bizarreSelected", event => {
 const renderAttractionPreview = (selectedAttraction) => {
     contentTarget.innerHTML += `
     <div>Selected Attraction: ${selectedAttraction.name}</div>
-    <button id="${selectedAttraction.id}">Attraction Details</button>
+    <button id="attractionDetail--${selectedAttraction.id}">Attraction Details</button>
     `
 }
 
 eventHub.addEventListener("click", clickEvent => {
-    let attractionsSelectedId = clickEvent.target.value
+    if (clickEvent.target.id.startsWith("attractionDetail")) {
+    const [prefix, attractionsSelectedId] = clickEvent.target.value.split("--")
     const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
         detail: {
             clickedAttraction: attractionsSelectedId
         }
     })
     eventHub.dispatchEvent(attractionSelectedCustomEvent)
+}
 })

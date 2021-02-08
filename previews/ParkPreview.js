@@ -25,11 +25,26 @@ const renderItineraryPreview = (selectedPark) => {
 
 
 eventHub.addEventListener("click", clickEvent => {
-    let parkSelectedId = clickEvent.target.value
+    if (clickEvent.target.id.startsWith("parkDetail")) {
+    const [prefix, parkSelectedId] = clickEvent.target.value.split("--")
     const parkSelectedCustomEvent = new CustomEvent("parkDetailsClicked", {
         detail: {
             clickedPark: parkSelectedId
         }
     })
     eventHub.dispatchEvent(parkSelectedCustomEvent)
+}
+})
+
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("attractionDetail")) {
+    const [prefix, attractionsSelectedId] = clickEvent.target.value.split("--")
+    const attractionSelectedCustomEvent = new CustomEvent("attractionDetailsClicked", {
+        detail: {
+            clickedAttraction: attractionsSelectedId
+        }
+    })
+    eventHub.dispatchEvent(attractionSelectedCustomEvent)
+}
 })
