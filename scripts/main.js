@@ -8,12 +8,12 @@ import "../previews/EateryPreview.js"
 import "./itineraries/ItinerarySave.js"
 import { disableBtn, renderSaveButton } from "./itineraries/ItinerarySave.js";
 import { itineraryList } from "./itineraries/ItinerariesList.js";
-
+import "./weather/WeatherList.js";
 
 ParkSelect()
 AttractionSelect()
 EaterySelect()
-WeatherList()
+// WeatherList()
 renderSaveButton()
 itineraryList()
 disableBtn()
