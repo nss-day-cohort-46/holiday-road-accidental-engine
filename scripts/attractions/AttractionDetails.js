@@ -16,21 +16,21 @@ export const render = (bizarraries) => {
 }
 
 const eventHub = document.querySelector(".mainContainer")
-eventHub.addEventListener("bizarreDetailsClicked", event => {
-    // console.log("event", event)
-    const bizarreId = clickEvent.detail.bizarreId
+eventHub.addEventListener("bizarreDetailsClicked", clickEvent => {
+    // console.log("event", clickEvent)
+    const attractionId = clickEvent.detail.attractionId
     const bizarreArray = useAttractions()
     
-    const selectedBizarre = bizarreArray.find((bizarraries) => bizarraries.id === parseInt(bizarreId))
+    const selectedBizarre = bizarreArray.find((bizarraries) => bizarraries.id === parseInt(attractionId))
     // // console.log('selectedBizarre: ', selectedBizarre)
     render(selectedBizarre)
     
     // testing code
-    // const bizarreId = "5"
+    // const attractionId = "5"
     // getAttractions()
     // .then(responseArray => {
     //     const bizarreArray = useAttractions()
-    //     const selectedBizarre = bizarreArray.find((bizarraries) => bizarraries.id === parseInt(bizarreId))
+    //     const selectedBizarre = bizarreArray.find((bizarraries) => bizarraries.id === parseInt(attractionId))
     //     render(selectedBizarre)
     //     console.log(selectedBizarre)
 

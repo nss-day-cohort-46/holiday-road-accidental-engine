@@ -16,8 +16,8 @@ export const render = (eateriesObject) => {
 }
 
 const eventHub = document.querySelector(".mainContainer")
-eventHub.addEventListener("eateryDetailsClicked", event => {
-    // console.log("event", event)
+eventHub.addEventListener("eateryDetailsClicked", clickEvent => {
+    // console.log("event", clickEvent)
     const eateryId = clickEvent.detail.eateryId
     const eateryArray = useEateries()
     
