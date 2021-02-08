@@ -1,6 +1,10 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
 
 const contentTarget = document.querySelector(".weatherPreview")
+const eventHub = document.querySelector(".container")
+
+
+eventHub.addEventListener()
 
 //gets weather data from API, puts into an array to be rendered----------
 export const WeatherList = () => {
