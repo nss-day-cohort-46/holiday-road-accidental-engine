@@ -30,26 +30,25 @@ export const WeatherList = (lat, lon) => {
 
 //renders 5 day forcast to dom---------------------------------------------
 const render = weatherCollection => {
-    console.log(weatherCollection)
     contentTarget.innerHTML = `
         <section class="weatherContainer">
-            <div class="dayOne">
+            <div class="day">
                 <div class="dayOneTemp">${weatherCollection[0]}</div>
                 <div class="dayOneDescription">${weatherCollection[5]}</div>
             </div>
-            <div class="dayTwo">
+            <div class="day">
                 <div class="dayTwoTemp">${weatherCollection[1]}</div>
                 <div class="dayTwoDescription">${weatherCollection[6]}</div>
             </div>
-            <div class="dayThree">
+            <div class="day">
                 <div class="dayThreeTemp">${weatherCollection[2]}</div>
                 <div class="dayThreeDescription">${weatherCollection[7]}</div>
             </div>
-            <div class="dayFour">
+            <div class="day">
                 <div class="dayFourTemp">${weatherCollection[3]}</div>
                 <div class="dayFourDescription">${weatherCollection[8]}</div>
             </div>
-            <div class="dayFive">
+            <div class="day">
                 <div class="dayFiveTemp">${weatherCollection[4]}</div>
                 <div class="dayFiveDescription">${weatherCollection[9]}</div>
             </div>
