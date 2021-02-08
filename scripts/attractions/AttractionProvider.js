@@ -14,6 +14,3 @@ export const getAttractions = () => {
             }
         )
 }
-
-
-// &limit=500 - to provide more than 50 options in the select dropdown.
