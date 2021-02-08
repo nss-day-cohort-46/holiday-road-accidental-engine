@@ -5,13 +5,11 @@ const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.getElementById("bizarrariesButton")
 
 eventHub.addEventListener("change", changeEvent => {
-    
     if (changeEvent.target.id === "bizarrariesDropdown") {
-        
         const selectBizarre = changeEvent.target.value
         const bizarreSelectedEvent = new CustomEvent("bizarreSelected", {
             detail: {
-                selectBizarre: selectBizarre
+                bizarreId: parseInt(selectBizarre)
             }
         })
         eventHub.dispatchEvent(bizarreSelectedEvent)

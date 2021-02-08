@@ -1,12 +1,12 @@
-export const ItineraryHTMLConverter = (itineraryObject) => {
+export const itineraryHTMLConverter = (itineraryObject) => {
     
     return `
         
         <section class="itinerary">
             
-            <div class="itineraryPark">Park: ${itineraryObject.parkName}</div>
-            <div class="itineraryEatery">Eatery: ${itineraryObject.eateryName}</div>
-            <div class="itineraryBizarraries">Bizarrary: ${itineraryObject.bizarrieName}</div>
+            <div class="itineraryPark"><b>Park:</b> ${itineraryObject.parkName}</div>
+            <div class="itineraryEatery"><b>Eatery:</b> ${itineraryObject.eateryName}</div>
+            <div class="itineraryBizarraries"><b>Bizarrary:</b> ${itineraryObject.bizarraryName}</div>
         </section>
     `
 }
