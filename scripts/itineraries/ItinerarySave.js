@@ -19,6 +19,10 @@ export const renderSaveButton = () => {
 
 }
 
+let parkLoc = {
+    parkLat: "",
+    parkLong: ""
+}
 
 
 let newItineraryObject = {
@@ -46,8 +50,11 @@ eventHub.addEventListener("parkSelect", customEvent => {
     })
     
     //assign the captured data to newItineraryObject values
+    parkLoc.parkLat = selectedPark.latitude
+    parkLoc.parkLong = selectedPark.longitude
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
+    debugger
     console.log(newItineraryObject)
     
     //enable save button if all dropdowns have been selected
