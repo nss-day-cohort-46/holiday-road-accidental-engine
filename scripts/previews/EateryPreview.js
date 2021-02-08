@@ -1,5 +1,5 @@
-import { useEateries } from "../scripts/eateries/EateryProvider.js"
-import "../scripts/eateries/EaterySelect.js"
+import { useEateries } from "../eateries/EateryProvider.js"
+import "../eateries/EaterySelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")

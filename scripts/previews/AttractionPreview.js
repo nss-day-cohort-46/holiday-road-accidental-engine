@@ -1,5 +1,5 @@
-import { useAttractions } from "../scripts/attractions/AttractionProvider.js"
-import "../scripts/attractions/AttractionSelect.js"
+import { useAttractions } from "../attractions/AttractionProvider.js"
+import "../attractions/AttractionSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
 const contentTarget = document.querySelector(".previews")
