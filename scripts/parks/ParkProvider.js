@@ -14,3 +14,6 @@ export const getParks = () => {
         //the json content is then assigned to a variable 
         .then(parksArray => parks = parksArray)
 }
+
+
+// 

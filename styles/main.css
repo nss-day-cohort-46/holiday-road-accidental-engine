@@ -39,18 +39,20 @@ footer {
     border-radius: 15px;
 }
 
-.mainContainer {
+.previews {
+    background-color: #249ea0;
+}
+
+  .mainContainer {
     display: flex;
 }
 
 .containerLeft {
     flex: 80%;
-
 }
 
 .containerRight {
-    flex: 20%;
-    
+    flex: 20%;  
 }
 
 .savedItinerary {
