@@ -1,4 +1,3 @@
-
 import { useAttractions, getAttractions } from "./AttractionProvider.js"
 
 const eventHub = document.querySelector(".mainContainer")

@@ -54,7 +54,7 @@ eventHub.addEventListener("parkSelect", customEvent => {
     parkLoc.parkLong = selectedPark.longitude
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
-    debugger
+    // debugger
     console.log(newItineraryObject)
     
     //enable save button if all dropdowns have been selected
@@ -121,7 +121,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addToItinerary")
     {
         if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
-              
+            
             console.log(newItineraryObject.parkName)
             // assign captured variables to new object
             const newItinerary = {

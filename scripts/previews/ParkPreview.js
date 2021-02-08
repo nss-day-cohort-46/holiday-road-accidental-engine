@@ -12,17 +12,20 @@ eventHub.addEventListener("parkSelect", event => {
         })
         renderItineraryPreview(parkSelectedEvent)
     }
-    
 })
 
 const renderItineraryPreview = (selectedPark) => {
     contentTarget.innerHTML = `
+<<<<<<< HEAD:scripts/previews/ParkPreview.js
     <h3>Itinerary Preview</h3>
     <div class="selectedPark">Selected Park: ${selectedPark.name}</div>
+=======
+    <h3 class="itineraryPreview">Itinerary Preview:</h3>
+    <div>Selected Park: ${selectedPark.name}</div>
+>>>>>>> main:previews/ParkPreview.js
     <button id="parkDetail--${selectedPark.id}">Park Details</button>
     `
 }
-
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("parkDetail")) {
