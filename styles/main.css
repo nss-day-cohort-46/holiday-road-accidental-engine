@@ -40,7 +40,16 @@ footer {
 }
 
 .previews {
-    background-color: #249ea0;
+    background-color: #008083;
+    justify-content: space-around;
+    /* margin: 10px; */
+    /* border: solid black 2px; */
+    /* padding: 10px; */
+    border-radius: 5px;
+}
+
+.itineraryPreview {
+    /* text-align: center; */
 }
 
   .mainContainer {

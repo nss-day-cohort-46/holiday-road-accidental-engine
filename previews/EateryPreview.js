@@ -12,7 +12,6 @@ eventHub.addEventListener("eateryChosen", event => {
         })
         renderEateryPreview(eaterySelectedEvent)
     }
-
 })
 
 const renderEateryPreview = (selectedEatery) => {
