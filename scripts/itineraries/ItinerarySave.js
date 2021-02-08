@@ -121,7 +121,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addToItinerary")
     {
         if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
-              
+            
             console.log(newItineraryObject.parkName)
             // assign captured variables to new object
             const newItinerary = {
