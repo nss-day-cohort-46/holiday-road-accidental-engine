@@ -5,6 +5,7 @@ import { EaterySelect } from "./eateries/EaterySelect.js";
 import "./parks/ParkDetails.js";
 import "./eateries/EateryDetails.js";
 import "./attractions/AttractionDetails.js";
+import { WeatherList } from "./weather/WeatherList.js";
 import "../previews/ParkPreview.js"
 import "../previews/AttractionPreview.js"
 import "../previews/EateryPreview.js"
@@ -12,9 +13,11 @@ import "./itineraries/ItinerarySave.js"
 import { disableBtn, renderSaveButton } from "./itineraries/ItinerarySave.js";
 import { itineraryList } from "./itineraries/ItinerariesList.js";
 
+
 ParkSelect()
 AttractionSelect()
 EaterySelect()
+WeatherList()
 renderSaveButton()
 // ParkButtonList()
 

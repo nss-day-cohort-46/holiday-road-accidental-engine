@@ -19,6 +19,10 @@ export const renderSaveButton = () => {
 
 }
 
+let parkLoc = {
+    parkLat: "",
+    parkLong: ""
+}
 
 
 let newItineraryObject = {
@@ -46,8 +50,11 @@ eventHub.addEventListener("parkSelect", customEvent => {
     })
     
     //assign the captured data to newItineraryObject values
+    parkLoc.parkLat = selectedPark.latitude
+    parkLoc.parkLong = selectedPark.longitude
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
+    debugger
     console.log(newItineraryObject)
     
     //enable save button if all dropdowns have been selected
@@ -84,8 +91,9 @@ eventHub.addEventListener("eateryChosen", customEvent => {
 
 eventHub.addEventListener("bizarreSelected", customEvent => {
     console.log(newItineraryObject)
+    
     //access payload of custom event
-    let bizarreId = customEvent.detail.selectBizarre
+    let bizarreId = customEvent.detail.bizarreId
 
     //assign useAttractions() to a variable so it can be searched with .find()
     let bizarreArray = useAttractions()
@@ -113,7 +121,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addToItinerary")
     {
         if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
-            // debugger  
+            
             console.log(newItineraryObject.parkName)
             // assign captured variables to new object
             const newItinerary = {
@@ -131,10 +139,12 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
+//function to disable save itinerary button by default. Imports to main.js
 export const disableBtn = () => {
     document.getElementById("addToItinerary").disabled = true;
 }
   
+//function to enable save itinerary button once all three dropdowns are selected
 const enableBtn = () => {
     document.getElementById("addToItinerary").disabled = false;
 }
