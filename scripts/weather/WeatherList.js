@@ -31,7 +31,6 @@ export const WeatherList = (lat, lon) => {
 //renders 5 day forcast to dom---------------------------------------------
 const render = weatherCollection => {
     console.log(weatherCollection)
-    // debugger
     contentTarget.innerHTML = `
         <section class="weatherContainer">
             <div class="dayOne">
