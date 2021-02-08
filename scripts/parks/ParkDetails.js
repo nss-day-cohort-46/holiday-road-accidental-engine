@@ -16,11 +16,12 @@ export const render = (park) => {
 }
 
 const eventHub = document.querySelector(".mainContainer")
-eventHub.addEventListener("parkDetailsClicked",event => {
-    // console.log("event", event)
+eventHub.addEventListener("parkDetailsClicked",clickEvent => {
+    // console.log("event", clickEvent)
     const parkId = clickEvent.detail.parkId
     const parksArray = useParks()
     
+    debugger
     const selectedPark = parksArray.find((park) => park.id === parkId)
     // console.log('selectedPark: ', selectedPark)
     render(selectedPark)
