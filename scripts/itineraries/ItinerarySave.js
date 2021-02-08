@@ -131,10 +131,12 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
+//function to disable save itinerary button by default. Imports to main.js
 export const disableBtn = () => {
     document.getElementById("addToItinerary").disabled = true;
 }
   
+//function to enable save itinerary button once all three dropdowns are selected
 const enableBtn = () => {
     document.getElementById("addToItinerary").disabled = false;
 }
