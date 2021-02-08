@@ -12,7 +12,7 @@ const contentTarget = document.getElementById("parksButton")
 eventHub.addEventListener("change", changeEvent => {
     //if eventListener detects a change on the "parkSelect" element...
     if (changeEvent.target.id === "parkDropdown") {
-        debugger
+        
         //gets the name of the currently selected park
         const selectedPark = changeEvent.target.value
 
