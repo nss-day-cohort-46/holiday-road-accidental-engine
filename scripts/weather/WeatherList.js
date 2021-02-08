@@ -1,10 +1,28 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
+import { useParks } from "../parks/ParkProvider.js"
 
 const contentTarget = document.querySelector(".weatherPreview")
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector(".mainContainer")
 
 
-eventHub.addEventListener()
+let parkLat = []
+let parkLon = []
+
+
+//listens for "parkSelect", grabs payload for matching park ID
+eventHub.addEventListener("parkSelect", customEvent => {
+    debugger
+    let parkId = customEvent.detail.parkId
+    let parkArray = useParks()
+    let selectedPark = parkArray.find(parkObj => {
+        debugger
+        return parkObj === parkId
+    })
+    
+    parkLat = selectedPark.latitude
+    parkLon = selectedPark.longitude
+    console.log(parkLat, parkLon)
+})
 
 //gets weather data from API, puts into an array to be rendered----------
 export const WeatherList = () => {

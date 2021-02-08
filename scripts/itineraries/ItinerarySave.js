@@ -54,7 +54,7 @@ eventHub.addEventListener("parkSelect", customEvent => {
     parkLoc.parkLong = selectedPark.longitude
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
-    debugger
+    // debugger
     console.log(newItineraryObject)
     
     //enable save button if all dropdowns have been selected
