@@ -84,8 +84,9 @@ eventHub.addEventListener("eateryChosen", customEvent => {
 
 eventHub.addEventListener("bizarreSelected", customEvent => {
     console.log(newItineraryObject)
+    debugger
     //access payload of custom event
-    let bizarreId = customEvent.detail.selectBizarre
+    let bizarreId = customEvent.detail.bizarreId
 
     //assign useAttractions() to a variable so it can be searched with .find()
     let bizarreArray = useAttractions()
