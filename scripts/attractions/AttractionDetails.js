@@ -6,6 +6,7 @@ export const render = (bizarraries) => {
 
     const bizarrariesHTML = `
     <h4>Bizarre Details for ${bizarraries.name}</h4>
+
     <section class="bizarre__container">
     <div class="bizarre__name">Name: ${bizarraries.name}</div>
     <div class="bizarre__description">Details ${bizarraries.description}</div>
