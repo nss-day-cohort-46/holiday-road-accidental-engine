@@ -7,6 +7,9 @@ body {
     margin: 0%;
     background-color: #cc8a32;
     font-family: 'Actor', sans-serif;
+    margin-bottom: 200px;
+    
+    
 }
 .logo {
     width: 200px;
@@ -29,6 +32,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 75px;
 }
 .footerBoxes {
     color: #cc8a32;
