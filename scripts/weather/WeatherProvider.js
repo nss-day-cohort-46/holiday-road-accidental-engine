@@ -22,6 +22,7 @@ let des5 = []
 
 //creates+copies an array with temps and descriptions---------------------
 export const useWeather = () => {
+    weather.splice(0, 10)
     weather.push(temp1, temp2, temp3, temp4, temp5, des1, des2, des3, des4, des5)
     return weather.slice()
 };
@@ -31,7 +32,7 @@ const weatherAPIkey = settings.weatherKey
 
 //get temp and weather description from API-----------------------------------------------------------
 export const getWeather = (lat, lon) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=d5b900ebf7bb2e5d1d38789cbb0736b9&units=imperial`)
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${weatherAPIkey}&units=imperial`)
         .then(response => response.json())
         .then(parsedWeather => {
             //finds each day from API and puts into var---
@@ -41,11 +42,11 @@ export const getWeather = (lat, lon) => {
             day4 = parsedWeather.daily[3]
             day5 = parsedWeather.daily[4]
             //grabs temperature for each day---
-            temp1 = day1.temp.day
-            temp2 = day2.temp.day
-            temp3 = day3.temp.day
-            temp4 = day4.temp.day
-            temp5 = day5.temp.day
+            temp1 = parseInt(day1.temp.day)
+            temp2 = parseInt(day2.temp.day)
+            temp3 = parseInt(day3.temp.day)
+            temp4 = parseInt(day4.temp.day)
+            temp5 = parseInt(day5.temp.day)
             //grabs weather description for each day---
             des1 = day1.weather[0].description
             des2 = day2.weather[0].description
@@ -53,5 +54,6 @@ export const getWeather = (lat, lon) => {
             des4 = day4.weather[0].description
             des5 = day5.weather[0].description
         })
+
 }
 
