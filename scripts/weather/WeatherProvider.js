@@ -31,7 +31,7 @@ const weatherAPIkey = settings.weatherKey
 
 //get temp and weather description from API-----------------------------------------------------------
 export const getWeather = (lat, lon) => {
-    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=d5b900ebf7bb2e5d1d38789cbb0736b9&units=imperial`)
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${weatherAPIkey}&units=imperial`)
         .then(response => response.json())
         .then(parsedWeather => {
             //finds each day from API and puts into var---
