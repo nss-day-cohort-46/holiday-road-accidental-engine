@@ -17,9 +17,3 @@ EaterySelect()
 renderSaveButton()
 itineraryList()
 disableBtn()
-
-// WeatherList()
-// ParkButtonList()
-// this is for testing the parks details component
-// import { testFunction } from "./attractions/AttractionDetails.js"
-// testFunction()

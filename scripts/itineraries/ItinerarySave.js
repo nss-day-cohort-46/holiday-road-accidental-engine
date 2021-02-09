@@ -36,7 +36,7 @@ let newItineraryObject = {
 
 //listen for parkSelect custom events
 eventHub.addEventListener("parkSelect", customEvent => {
-    console.log(newItineraryObject)
+    
     
     //access payload of custom event
     let parkId = customEvent.detail.parkId
@@ -54,8 +54,8 @@ eventHub.addEventListener("parkSelect", customEvent => {
     parkLoc.parkLong = selectedPark.longitude
     newItineraryObject.parkId = parkId
     newItineraryObject.parkName = selectedPark.fullName
-    // debugger
-    console.log(newItineraryObject)
+    
+    
     
     //enable save button if all dropdowns have been selected
     if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
@@ -80,7 +80,7 @@ eventHub.addEventListener("eateryChosen", customEvent => {
     
     newItineraryObject.eateryId = eateryId
     newItineraryObject.eateryName = selectedEatery.businessName
-    console.log(newItineraryObject)
+    
 
     //enable save button if all dropdowns have been selected
     if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {
@@ -90,7 +90,7 @@ eventHub.addEventListener("eateryChosen", customEvent => {
 
 
 eventHub.addEventListener("bizarreSelected", customEvent => {
-    console.log(newItineraryObject)
+    
     
     //access payload of custom event
     let bizarreId = customEvent.detail.bizarreId
@@ -106,7 +106,7 @@ eventHub.addEventListener("bizarreSelected", customEvent => {
     
     newItineraryObject.bizarrieId = bizarreId
     newItineraryObject.bizarrieName = selectedBizarre.name
-    console.log(newItineraryObject)
+    
 
     //enable save button if all dropdowns have been selected
     if (newItineraryObject.parkName !== "" && newItineraryObject.eateryName !== "" && newItineraryObject.bizarrieName !== "") {

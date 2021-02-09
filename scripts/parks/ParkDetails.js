@@ -8,8 +8,8 @@ export const render = (park) => {
     <h2>Park Details for ${park.fullName}</h2>
 
     <section class="park__containter">
-    <div class="park__name">Name: ${park.fullName}</div>
-    <div class="park__description">Details ${park.description}</div>
+    <div class="park__name"><b>Name: </b>${park.fullName}</div><br>
+    <div class="park__description"><b>Details:</b> ${park.description}</div><br>
     </section>`
     
     contentContainer.innerHTML = parksHTML
