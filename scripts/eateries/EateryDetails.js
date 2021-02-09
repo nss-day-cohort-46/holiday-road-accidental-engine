@@ -1,13 +1,12 @@
 import { useEateries } from "./EateryProvider.js"
 
-const contentContainer = document.querySelector(".previews")
+const contentContainer = document.querySelector(".eateryDetails")
 
 export const render = (eateriesObject) => {
 
     const eateriesHTML = `
     <h2>Eatery Details for ${eateriesObject.businessName}</h2>
-
-    <section class="eatery__containter">
+    <section class="eatery__container">
     <div class="eatery__name">Name: ${eateriesObject.businessName}</div>
     <div class="eatery__description">Details ${eateriesObject.description}</div>
     </section>`
