@@ -2,7 +2,7 @@ import { useEateries } from "../eateries/EateryProvider.js"
 import "../eateries/EaterySelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
-const contentTarget = document.querySelector(".previews")
+const contentTarget = document.querySelector(".eateryPreview")
 
 eventHub.addEventListener("eateryChosen", event => {
     if (event.detail.eateryThatWasChosen !== "0") {
@@ -15,7 +15,7 @@ eventHub.addEventListener("eateryChosen", event => {
 })
 
 const renderEateryPreview = (selectedEatery) => {
-    contentTarget.innerHTML += `
+    contentTarget.innerHTML = `
     <div class="selectedEatery">Selected Eatery: ${selectedEatery.businessName}</div>
     <button id="eateryDetail--${selectedEatery.id}">Eatery Details</button>
     `

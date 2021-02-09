@@ -2,7 +2,7 @@ import { useParks } from "../parks/ParkProvider.js"
 import "../parks/parkSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
-const contentTarget = document.querySelector(".previews")
+const contentTarget = document.querySelector(".parkPreview")
 
 eventHub.addEventListener("parkSelect", event => {
     if (event.detail.parkId !== "0") {
@@ -16,13 +16,7 @@ eventHub.addEventListener("parkSelect", event => {
 
 const renderItineraryPreview = (selectedPark) => {
     contentTarget.innerHTML = `
-<<<<<<< HEAD:scripts/previews/ParkPreview.js
-    <h3>Itinerary Preview</h3>
-    <div class="selectedPark">Selected Park: ${selectedPark.name}</div>
-=======
-    <h3 class="itineraryPreview">Itinerary Preview:</h3>
     <div>Selected Park: ${selectedPark.name}</div>
->>>>>>> main:previews/ParkPreview.js
     <button id="parkDetail--${selectedPark.id}">Park Details</button>
     `
 }

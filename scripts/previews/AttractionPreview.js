@@ -2,7 +2,7 @@ import { useAttractions } from "../attractions/AttractionProvider.js"
 import "../attractions/AttractionSelect.js"
 
 const eventHub = document.querySelector(".mainContainer")
-const contentTarget = document.querySelector(".previews")
+const contentTarget = document.querySelector(".attractionPreview")
 
 eventHub.addEventListener("bizarreSelected", event => {
     if (event.detail.bizarreId !== "0") {
@@ -15,7 +15,7 @@ eventHub.addEventListener("bizarreSelected", event => {
 })
 
 const renderAttractionPreview = (selectedAttraction) => {
-    contentTarget.innerHTML += `
+    contentTarget.innerHTML = `
     <div class="selectedAttraction">Selected Attraction: ${selectedAttraction.name}</div>
     <button id="attractionDetail--${selectedAttraction.id}">Attraction Details</button>
     `
