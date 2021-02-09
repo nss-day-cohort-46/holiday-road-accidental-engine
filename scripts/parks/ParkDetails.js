@@ -1,6 +1,6 @@
 import { useParks } from "./ParkProvider.js"
 
-const contentContainer = document.querySelector(".previews")
+const contentContainer = document.querySelector(".parkDetails")
 
 export const render = (park) => {
 
@@ -20,9 +20,7 @@ eventHub.addEventListener("parkDetailsClicked", clickEvent => {
     // console.log("event", clickEvent)
     const parkId = clickEvent.detail.parkId
     const parksArray = useParks()
-    
-    debugger
-    const selectedPark = parksArray.find((park) => park.id === parkId)
+        const selectedPark = parksArray.find((park) => park.id === parkId)
     // console.log('selectedPark: ', selectedPark)
     render(selectedPark)
     

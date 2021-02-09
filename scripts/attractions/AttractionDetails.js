@@ -1,13 +1,12 @@
 import { useAttractions } from "./AttractionProvider.js"
 
-const contentContainer = document.querySelector(".previews")
+const contentContainer = document.querySelector(".attractionDetails")
 
 export const render = (bizarraries) => {
 
     const bizarrariesHTML = `
-    <h2>Bizarre Details for ${bizarraries.name}</h2>
-
-    <section class="bizarre__containter">
+    <h4>Bizarre Details for ${bizarraries.name}</h4>
+    <section class="bizarre__container">
     <div class="bizarre__name">Name: ${bizarraries.name}</div>
     <div class="bizarre__description">Details ${bizarraries.description}</div>
     </section>`
