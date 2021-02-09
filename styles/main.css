@@ -44,16 +44,12 @@ footer {
 }
 
 .previews {
-    background-color: #008083;
     justify-content: space-around;
-    /* margin: 10px; */
-    /* border: solid black 2px; */
-    /* padding: 10px; */
+    background-color: #008083;
+    margin: 2px;
+    border: solid black 2px;
+    padding: 2px;
     border-radius: 5px;
-}
-
-.itineraryPreview {
-    /* text-align: center; */
 }
 
   .mainContainer {

@@ -1,6 +1,6 @@
 import { useEateries } from "./EateryProvider.js"
 
-const contentContainer = document.querySelector(".previews")
+const contentContainer = document.querySelector(".eateryDetails")
 
 export const render = (eateriesObject) => {
 
