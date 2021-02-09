@@ -16,8 +16,10 @@ eventHub.addEventListener("eateryChosen", event => {
 
 const renderEateryPreview = (selectedEatery) => {
     contentTarget.innerHTML += `
-    <div>Selected Eatery: ${selectedEatery.businessName}</div>
-    <button id="eateryDetail--${selectedEatery.id}">Eatery Details</button>
+    <div class="details">
+        <div>Selected Eatery: ${selectedEatery.businessName}</div>
+        <button id="eateryDetail--${selectedEatery.id}">Eatery Details</button>
+    </div>
     `
 }
 

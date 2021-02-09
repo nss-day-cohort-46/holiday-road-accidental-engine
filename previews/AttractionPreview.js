@@ -16,8 +16,10 @@ eventHub.addEventListener("bizarreSelected", event => {
 
 const renderAttractionPreview = (selectedAttraction) => {
     contentTarget.innerHTML += `
-    <div>Selected Attraction: ${selectedAttraction.name}</div>
-    <button id="attractionDetail--${selectedAttraction.id}">Attraction Details</button>
+    <div class="details">
+        <div>Selected Attraction: ${selectedAttraction.name}</div>
+        <button id="attractionDetail--${selectedAttraction.id}">Attraction Details</button>
+    </div>
     `
 }
 

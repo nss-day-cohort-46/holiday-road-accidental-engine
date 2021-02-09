@@ -8,8 +8,8 @@ export const render = (eateriesObject) => {
     <h2>Eatery Details for ${eateriesObject.businessName}</h2>
 
     <section class="eatery__containter">
-    <div class="eatery__name">Name: ${eateriesObject.businessName}</div>
-    <div class="eatery__description">Details ${eateriesObject.description}</div>
+    <div class="eatery__name"><b>Name: </b>${eateriesObject.businessName}</div>
+    <div class="eatery__description"><b>Details: </b>${eateriesObject.description}</div>
     </section>`
     
     contentContainer.innerHTML = eateriesHTML

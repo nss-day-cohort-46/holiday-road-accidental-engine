@@ -25,6 +25,10 @@ footer {
     padding: 40px 0;
     justify-content: space-evenly;
     background-color: #184553;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .footerBoxes {
     color: #cc8a32;
@@ -116,4 +120,61 @@ footer {
 
 #addToItinerary {
     padding: 10px;
+}
+
+.previews {
+    background: #184553;
+    color: white;
+    margin: 10px;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.weatherContainer {
+    background: #184553;
+    color: white;
+    margin: 10px;
+    border: black solid 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.day {
+    border: black 2px solid;
+    margin: 5px;
+    padding: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.park__containter {
+    border: black 2px solid;
+    margin: 5px;
+    padding: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 10px;
+}
+
+.previews > h2 {
+    margin: 10px;
+}
+
+.previews > h3 {
+    margin: 10px;
+}
+
+.details {
+    margin: 10px
+}
+
+.eatery__containter {
+    border: black 2px solid;
+    margin: 5px;
+    padding: 5px;
+    background-color:aliceblue;
+    color: black;
+    border-radius: 10px;
 }

@@ -19,6 +19,7 @@ let des3 = []
 let des4 = []
 let des5 = []
 
+
 //creates+copies an array with temps and descriptions---------------------
 export const useWeather = () => {
     weather.push(temp1, temp2, temp3, temp4, temp5, des1, des2, des3, des4, des5)

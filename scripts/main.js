@@ -28,4 +28,3 @@ renderSaveButton()
 
 itineraryList()
 disableBtn()
-

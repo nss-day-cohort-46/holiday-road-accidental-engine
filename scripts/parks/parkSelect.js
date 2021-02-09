@@ -29,6 +29,7 @@ eventHub.addEventListener("change", changeEvent => {
     }
 })
 
+
 export const ParkSelect = () => {
     //Trigger the fetch from the API
     getParks()
